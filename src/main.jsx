@@ -11,3 +11,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+// GitHub: https://github.com/mgjhdnccc/vitejs-vite-1n5ny4im
