@@ -78,10 +78,10 @@ export default function Login() {
       </div>
 
       <button
-        type="submit"
-        disabled={!email || !password || !accepted}
-      >
-        Giriş yap
+         type="submit"
+         disabled={!email || !password || !accepted || Object.keys(errors).length > 0}
+         >
+         Giriş yap
       </button>
     </form>
   );
