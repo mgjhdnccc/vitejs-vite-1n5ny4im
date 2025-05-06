@@ -3,7 +3,7 @@ describe('Login Formu Testleri', () => {
       cy.visit('http://localhost:5173/');
     });
   
-    it('✅ Başarılı form gönderimi ile success sayfasına giderim', () => {
+    it('Başarılı form gönderimi ile success sayfasına giderim', () => {
       cy.get('input[type="email"]').type('test@example.com');
       cy.get('input[type="password"]').type('Test1234');
       cy.get('input[type="checkbox"]').check();
@@ -11,7 +11,7 @@ describe('Login Formu Testleri', () => {
       cy.contains('Giriş Başarılı').should('exist');
     });
   
-    it('❌ Hatalı email girildiğinde: uyarı gösterilmeli, buton pasif olmalı', () => {
+    it('Hatalı email girildiğinde: uyarı gösterilmeli, buton pasif olmalı', () => {
       cy.get('input[type="email"]').type('test.com'); // geçersiz email
       cy.get('input[type="password"]').type('Test1234');
       cy.get('input[type="checkbox"]').check();
@@ -21,7 +21,7 @@ describe('Login Formu Testleri', () => {
       cy.get('button').should('be.disabled');
     });
   
-    it('❌ Email ve şifre hatalıysa 2 hata mesajı görünmeli, buton disabled olmalı', () => {
+    it('Email ve şifre hatalıysa 2 hata mesajı görünmeli, buton disabled olmalı', () => {
       cy.get('input[type="email"]').type('yanlisemail');
       cy.get('input[type="password"]').type('123'); // zayıf şifre
       cy.get('input[type="checkbox"]').check();
@@ -33,7 +33,7 @@ describe('Login Formu Testleri', () => {
       cy.get('button').should('be.disabled');
     });
   
-    it('❌ Email ve şifre doğru ama checkbox seçili değilse buton disabled olmalı', () => {
+    it('Email ve şifre doğru ama checkbox seçili değilse buton disabled olmalı', () => {
       cy.get('input[type="email"]').type('test@example.com');
       cy.get('input[type="password"]').type('Test1234');
   

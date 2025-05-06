@@ -6,6 +6,6 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       // node eventleri buraya yazabilirsin
     },
-    supportFile: 'cypress/support/e2e.js'  // 👈 bunu ekliyoruz
+    supportFile: 'cypress/support/e2e.js'  // bunu ekliyoruz
   }
 });
